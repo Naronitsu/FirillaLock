@@ -1,0 +1,9 @@
+numpy
+sounddevice
+faster-whisper
+webrtcvad-wheels
+librosa
+scipy
+tqdm
+pystray
+pillow
