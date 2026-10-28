@@ -12,7 +12,7 @@ Everything runs locally. No audio ever leaves your computer.
 ## Requirements
 
 - Windows 10/11
-- Python 3.10 or newer ([python.org](https://www.python.org/downloads/), tick **Add python.exe to PATH**)
+- Python 3.10 or newer. Don't have it? `Setup.bat` offers to install Python 3.11 for you (see below)
 - A microphone
 - Internet on first setup only (packages, plus a ~140 MB speech model)
 
@@ -20,6 +20,8 @@ Everything runs locally. No audio ever leaves your computer.
 
 1. Put the folder anywhere you like.
 2. Double-click **`Setup.bat`**.
+
+If Python 3.10+ isn't found, Setup asks **"Install Python now?"**. Say yes and it installs Python 3.11 for your user account only (no admin rights), using `winget` if available or the official installer from python.org otherwise. Say no and it points you to python.org.
 
 Setup creates a virtual environment, installs the packages, downloads the speech model into `models/`, draws the icon, adds a **Firilla Voice Lock** shortcut to your desktop and launches the app. If the `models/` folder is already present, nothing is downloaded.
 
@@ -63,7 +65,7 @@ To keep your voiceprint and settings, also copy `voiceprint.npy` and `config.jso
 | It keeps denying you | Lower the strictness slider, or re-enroll in a quiet spot with the mic you'll actually use |
 | It doesn't react to the phrase | Check the diary for what it heard. Speak clearly, closer to the mic |
 | Model download fails | Check your internet and restart the app, or copy the `models/` folder from another PC |
-| Setup says Python is missing | Install Python and tick **Add python.exe to PATH**, then rerun `Setup.bat` |
+| Python was installed but Setup can't find it | Close the window and run `Setup.bat` again, or install Python manually from python.org with **Add python.exe to PATH** ticked |
 | Shortcut is gone | Run `make_shortcut.ps1` (right-click, **Run with PowerShell**) |
 
 ## What's in the folder
